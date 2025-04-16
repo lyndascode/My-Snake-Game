@@ -89,7 +89,14 @@ class Snake {
 }
  
 
-const snake = newSnake(10, 10, 10, 20, "right");
+const snake = new Snake(10, 10, 10, 20, "right");
 setInterval(() => {
   snake.move();
-},100)
+}, 100)
+
+
+
+//Check if the snake touches the fruit → if yes:
+//Move the fruit somewhere else.
+//  then Increase the score or grow the snake.
+
