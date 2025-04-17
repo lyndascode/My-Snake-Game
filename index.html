@@ -5,22 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <section class="main-container">
+
+        <div id="score"> Score: 0 </div>
+
         <h1>Welcome to the Snake Game</h1>
+
         <div class="gameContainer-outside">
             <div class="gameContainer-inside">
                 <div class="fruit"></div>
             </div>
         </div>
+
+        <div id="gameOverScreen">
+            <h1>💀 <br> Game Over</h1>
+            <button id="restartButton">Restart</button>
+        </div>
+
+        <audio id="beepSound" src="./assets/beep.mp3"></audio>
+        <audio id="gameOverSound" src="./assets/game-over-2-sound-effect-230463.mp3" preload="auto"></audio>
+
+        <button class="pause-Button">⏸ Pause</button>
     </section>
 
     <script src="./js/src/food.js"></script>
     <script src="./js/src/snake.js"></script>
     <script src="./js/index.js"></script>
+
 </body>
 
 </html>
