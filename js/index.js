@@ -1,5 +1,7 @@
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     let snake;
     let fruit;
@@ -38,16 +40,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-        const pauseBtn = document.getElementsByClassName("pause-Button")[0];
 
-        pauseBtn.addEventListener("click", () => {
-            isPaused = !isPaused;
-
-            pauseBtn.textContent = isPaused ? "▶️ Resume" : "⏸ Pause";
-        });
 
     }
-    startGame();
+
+
+    // start button
+    const startBtn = document.getElementById("startButton");
+    startBtn.addEventListener("click", () => {
+        startGame();
+        startBtn.style.display = "none"; // Hide after click
+    });
+
+    // pause button 
+    const pauseBtn = document.getElementsByClassName("pause-Button")[0];
+    pauseBtn.addEventListener("click", () => {
+        if (isPaused === true) {
+            isPaused = false;
+        } else {
+            isPaused = true;
+        }
+        pauseBtn.textContent = isPaused ? "▶️ Resume" : "⏸ Pause";
+    });
+    window.addEventListener("keydown", (pressSpace) => {
+        if (pressSpace.code === "Space") {
+            pressSpace.preventDefault(); // ALERT!!! : this prevent page from scrolling
+            if (isPaused === true) {
+                isPaused = false;
+            } else {
+                isPaused = true;
+            }
+
+            pauseBtn.textContent = isPaused ? " Resume" : "⏸ Pause";
+        }
+    });
+
+
 
     //  arrow key controls
     window.addEventListener("keydown", (press) => {

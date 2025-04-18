@@ -126,4 +126,3 @@ class Snake {
 
 //check collision with the wall
 
-
