@@ -1,11 +1,3 @@
-//create a snake with new div
-// to do : 
-/*if snake doesnt eat food : 
-  then continue top and left right etc 
-else : 
-  call the function foodRandomPosition
-  and make the snake bigger with one div 
-*/
 
 class Snake {
   constructor(x, y, width, height, direction) {
@@ -116,13 +108,4 @@ class Snake {
 
   }
 }
-
-
-
-
-//Check if the snake touches the fruit → if yes:
-//Move the fruit somewhere else.
-//  then Increase the score or grow the snake.
-
-//check collision with the wall
 
